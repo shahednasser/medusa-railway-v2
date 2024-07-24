@@ -16,7 +16,8 @@ module.exports = defineConfig({
     workerMode: process.env.MEDUSA_WORKER_MODE
   },
   admin: {
-    disable: process.env.DISABLE_MEDUSA_ADMIN === "true"
+    disable: process.env.DISABLE_MEDUSA_ADMIN === "true",
+    backendUrl: process.env.MEDUSA_BACKEND_URL
   },
   modules: {
     [Modules.CACHE]: {
