@@ -1,4 +1,4 @@
-import { loadEnv, defineConfig } from '@medusajs/utils'
+import { loadEnv, defineConfig, Modules } from '@medusajs/utils'
 
 loadEnv(process.env.NODE_ENV, process.cwd())
 
@@ -16,5 +16,27 @@ module.exports = defineConfig({
   },
   admin: {
     disable: process.env.DISABLE_MEDUSA_ADMIN === "true"
+  },
+  modules: {
+    [Modules.CACHE]: {
+      resolve: "@medusajs/cache-redis",
+      options: { 
+        redisUrl: process.env.REDIS_URL,
+      },
+    },
+    [Modules.EVENT_BUS]: {
+      resolve: "@medusajs/event-bus-redis",
+      options: { 
+        redisUrl: process.env.REDIS_URL,
+      },
+    },
+    [Modules.WORKFLOW_ENGINE]: {
+      resolve: "@medusajs/workflow-engine-redis",
+      options: {
+        redis: {
+          url: process.env.REDIS_URL,
+        },
+      },
+    }
   }
 })
