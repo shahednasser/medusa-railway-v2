@@ -23,12 +23,12 @@
     "@medusajs/api-key": "preview",
     "@medusajs/auth": "preview",
     "@medusajs/cache-inmemory": "preview",
-    "@medusajs/cache-redis": "^1.9.2-preview-20240724090438",
+    "@medusajs/cache-redis": "preview",
     "@medusajs/cart": "preview",
     "@medusajs/currency": "preview",
     "@medusajs/customer": "preview",
     "@medusajs/event-bus-local": "preview",
-    "@medusajs/event-bus-redis": "^1.8.14-preview-20240724090438",
+    "@medusajs/event-bus-redis": "preview",
     "@medusajs/file": "preview",
     "@medusajs/file-local-next": "preview",
     "@medusajs/fulfillment": "preview",
@@ -49,7 +49,7 @@
     "@medusajs/tax": "preview",
     "@medusajs/user": "preview",
     "@medusajs/workflow-engine-inmemory": "preview",
-    "@medusajs/workflow-engine-redis": "^0.0.5-preview-20240724090438",
+    "@medusajs/workflow-engine-redis": "preview",
     "express": "^4.17.2"
   },
   "devDependencies": {
